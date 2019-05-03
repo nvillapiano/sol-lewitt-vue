@@ -1,0 +1,11 @@
+{
+  "name": "sol-lewitt",
+  "version": "1.0.0",
+  "description": "Digital creative translations of the works of Sol LeWitt",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Nick Villapiano",
+  "license": "ISC"
+}
