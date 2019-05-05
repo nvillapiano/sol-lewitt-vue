@@ -109,10 +109,10 @@
         <Tile class="style-4" />
         <Tile class="style-12" />
       </div>
-      <div v-on:click="randomNumber" class="tile-group">
+      <!-- <div v-on:click="randomNumber" class="tile-group">
         <Tile class="style-4" />
         <Tile class="style-18" />
-      </div>
+      </div> -->
 
     </div>
   </div>
