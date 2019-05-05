@@ -40,3 +40,28 @@ html, body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   padding: 1rem;
 }
+
+
+
+/////////////////////////////
+////  UI element styles  ////
+/////////////////////////////
+
+
+button {
+  border: none;
+  background: none;
+  border: 0.2rem solid $grey;
+  color: $grey;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $black;
+    background: $grey;
+    color: $black;
+  }
+}

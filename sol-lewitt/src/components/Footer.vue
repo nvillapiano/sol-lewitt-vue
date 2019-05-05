@@ -2,7 +2,8 @@
   <footer id="footer">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
-    <router-link to="/project-260">Project 260</router-link>
+    <router-link to="/project-260">Project 260</router-link> |
+    <router-link to="/project-260-glossary">Project 260 glossary</router-link>
   </footer>
 </template>
 

@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Project260 from './views/Project260.vue';
+import Project260Glossary from './views/Project260Glossary.vue';
 
 Vue.use(Router);
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/project-260',
       name: 'Project 260',
       component: Project260,
+    },
+    {
+      path: '/project-260-glossary',
+      name: 'Project 260 glossary',
+      component: Project260Glossary,
     },
   ],
 });

@@ -1,11 +1,11 @@
 <template>
-  <section class="tile style-17">
+  <section class="tile style-18">
   </section>
 </template>
 
 <script>
 export default {
-  name: 'TileStyle17',
+  name: 'TileStyle18',
 };
 </script>
 
@@ -14,7 +14,7 @@ export default {
 
   @import '../../scss/global';
 
-  .style-17 {
+  .style-18 {
     position: relative;
     overflow: hidden;
 
@@ -22,16 +22,16 @@ export default {
     &::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 50%;
-      width: 0.1rem;
-      height: 100%;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 0.1rem;
       background:
         linear-gradient(to right, $black 33%, $orange 0%) top/2rem 0.1rem repeat-x,
         linear-gradient($black 33%, $orange 0%) right/0.1rem 2rem repeat-y,
         linear-gradient(to right, $black 33%, $orange 0%) bottom/2rem 0.1rem repeat-x,
         linear-gradient($black 33%, $orange 0%) left/0.1rem 2rem repeat-y;
-      transform: translateX(50%);
+      transform: translateY(-50%);
     }
   }
 

@@ -22,7 +22,7 @@ export default {
     &::before {
       content: '';
       position: absolute;
-      top: -1.75rem;
+      top: -3.05rem;
       right: 0;
       width: 100%;
       height: 100%;
