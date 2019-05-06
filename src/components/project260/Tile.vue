@@ -40,13 +40,30 @@ export default {
 
   @import '../../scss/global';
 
-  // .style-x {
-  //   background: red;
-  // }
+  .tile {
 
-  // .style-y {
-  //   outline: 0.1rem solid blue;
-  // }
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   background: rgba(#000, 0.05) url(../../assets/icon--shuffle.svg) no-repeat center center;
+    //   background-size: 4rem;
+    //   width: 100%;
+    //   height: 100%;
+    //   opacity: 0;
+    //   transform: rotate(-90deg);
+    //   transition: opacity 0.3s;
+    // }
+
+    &:hover {
+      cursor: pointer;
+
+      // &::after {
+      //   opacity: 1;
+      // }
+    }
+  }
 
   .style-1 {
     position: relative;
@@ -136,7 +153,7 @@ export default {
       right: 1.75rem;
       width: 100%;
       height: 100%;
-      border: 0.1rem solid orange;
+      border: 0.1rem solid $orange;
       border-radius: 100% 0% 0% 0%;
       border-bottom-color: $black;
       border-right-color: $black;
@@ -156,7 +173,7 @@ export default {
       right: 0;
       width: 100%;
       height: 100%;
-      border: 0.1rem solid orange;
+      border: 0.1rem solid $orange;
       border-radius: 100% 0% 0% 0%;
       border-bottom-color: transparent;
       border-right-color: transparent;
@@ -176,7 +193,7 @@ export default {
       right: -1.75rem;
       width: 100%;
       height: 100%;
-      border: 0.1rem solid orange;
+      border: 0.1rem solid $orange;
       border-radius: 100% 0% 0% 0%;
       border-bottom-color: transparent;
       border-right-color: transparent;
@@ -196,7 +213,7 @@ export default {
       right: 0;
       width: 100%;
       height: 100%;
-      border: 0.1rem solid orange;
+      border: 0.1rem solid $orange;
       border-radius: 100% 0% 0% 0%;
       border-bottom-color: transparent;
       border-right-color: transparent;

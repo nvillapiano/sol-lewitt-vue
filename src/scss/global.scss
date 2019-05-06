@@ -22,7 +22,19 @@ h1 {
   @extend %heading1;
 }
 
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
 
+a {
+  color: $orange;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $grey;
+  }
+}
 
 /////////////////////////
 ////  Global styles  ////

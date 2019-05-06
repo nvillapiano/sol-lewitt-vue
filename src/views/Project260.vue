@@ -2,8 +2,39 @@
   <div class="project-260">
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <h1>Project 260</h1>
-    <button v-on:click="randomize" class="button randomize">randomize</button>
+    <ProjectIntro
+      title="Wall Drawing #260"
+      summary="
+        <p>
+          Over the course of his prolific, influential career, Sol LeWitt (American, 1928–2007) produced more than 1,200 wall drawings. This installation, which fills a single large gallery, features one of LeWitt’s celebrated examples from the Museum’s collection, Wall Drawing #260 (1975). The work’s subtitle serves to describe the installation: “on black walls, all two-part combinations of white arcs from corners and sides, and white straight, not-straight, and broken lines.” Although LeWitt’s wall drawings evoke the tradition of Italian fresco paintings, they have established a distinct tradition of their own, in which linear systems, determined by LeWitt in advance, are carried out by others, be they artists, trained assistants, or novice volunteers, based upon his instructions. LeWitt compared his role to that of a composer who creates a score that may be played by musicians for generations to come. The concept—or score—remains constant, but the wall drawing, like a musical performance, will vary slightly each time it is realized anew.
+        </p>
+        <p>
+          <a href='https://www.moma.org/calendar/exhibitions/305'>Museum of Modern Art</a>
+        </p>
+        <br/>
+        <p>
+          This translation of LeWitt's work has orange lines over black canvas, utilizing digital space in lieu of a physical wall. Additional abstractions include the ability to create fully randomized installations, and replace individual tiles with randomly generated patterns.
+        </p>
+      "
+    />
+    <div class="ui-bar">
+      <button v-on:click="randomize" class="button randomize">
+        <svg class="icon--shuffle" height='300px' width='300px' xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"
+          enable-background="new 0 0 100 100" xml:space="preserve">
+          <path fill="#d5d0cb"
+            d="M17.5,64.5h15.6c3.4,0,6.5-1.3,8.9-3.7L60.8,42c1.6-1.6,3.8-2.5,6.1-2.5h10.8l-1.6,1.6c-0.8,0.8-0.8,2,0,2.8  c0.4,0.4,0.9,0.6,1.4,0.6s1-0.2,1.4-0.6l5-5c0.1-0.1,0.2-0.2,0.3-0.3c0,0,0.1-0.1,0.1-0.1c0-0.1,0.1-0.1,0.1-0.2  c0-0.1,0-0.1,0.1-0.2c0-0.1,0-0.1,0.1-0.2c0.1-0.3,0.1-0.5,0-0.8c0-0.1,0-0.1-0.1-0.2c0-0.1,0-0.1-0.1-0.2c0-0.1-0.1-0.1-0.1-0.2  c0,0,0-0.1-0.1-0.1c-0.1-0.1-0.2-0.2-0.3-0.3l-5-5c-0.8-0.8-2-0.8-2.8,0c-0.8,0.8-0.8,2,0,2.8l1.6,1.6H66.9c-3.4,0-6.5,1.3-8.9,3.7  L39.2,58c-1.6,1.6-3.8,2.5-6.1,2.5H17.5c-1.1,0-2,0.9-2,2S16.4,64.5,17.5,64.5z">
+          </path>
+          <path fill="#d5d0cb"
+            d="M17.5,39.5h15.6c2.3,0,4.4,0.9,6.1,2.5l4.3,4.3c0.4,0.4,0.9,0.6,1.4,0.6c0.5,0,1-0.2,1.4-0.6  c0.8-0.8,0.8-2,0-2.8L42,39.2c-2.4-2.4-5.5-3.7-8.9-3.7H17.5c-1.1,0-2,0.9-2,2S16.4,39.5,17.5,39.5z">
+          </path>
+          <path fill="#d5d0cb"
+            d="M76.1,68.9c0.4,0.4,0.9,0.6,1.4,0.6s1-0.2,1.4-0.6l5-5c0.1-0.1,0.2-0.2,0.3-0.3c0,0,0.1-0.1,0.1-0.1  c0-0.1,0.1-0.1,0.1-0.2c0-0.1,0-0.1,0.1-0.2c0-0.1,0-0.1,0.1-0.2c0.1-0.3,0.1-0.5,0-0.8c0-0.1,0-0.1-0.1-0.2c0-0.1,0-0.1-0.1-0.2  c0-0.1-0.1-0.1-0.1-0.2c0,0,0-0.1-0.1-0.1c-0.1-0.1-0.2-0.2-0.3-0.3l-5-5c-0.8-0.8-2-0.8-2.8,0c-0.8,0.8-0.8,2,0,2.8l1.6,1.6H66.9  c-2.3,0-4.4-0.9-6.1-2.5l-4.4-4.4c-0.8-0.8-2-0.8-2.8,0c-0.8,0.8-0.8,2,0,2.8l4.4,4.4c2.4,2.4,5.5,3.7,8.9,3.7h10.8l-1.6,1.6  C75.3,66.9,75.3,68.1,76.1,68.9z">
+          </path>
+        </svg>
+        <span>randomize</span>
+        </button>
+    </div>
     <div class="tiles glossary">
 
       <!-- Row 1 -->
@@ -119,54 +150,14 @@
 </template>
 
 <script>
-// @ is an alias to /src
+import ProjectIntro from '@/components/ProjectIntro.vue';
 import Tile from '@/components/project260/Tile.vue';
-import TileStyle1 from '@/components/project260/TileStyle1.vue';
-import TileStyle2 from '@/components/project260/TileStyle2.vue';
-import TileStyle3 from '@/components/project260/TileStyle3.vue';
-import TileStyle4 from '@/components/project260/TileStyle4.vue';
-import TileStyle5 from '@/components/project260/TileStyle5.vue';
-import TileStyle6 from '@/components/project260/TileStyle6.vue';
-import TileStyle7 from '@/components/project260/TileStyle7.vue';
-import TileStyle8 from '@/components/project260/TileStyle8.vue';
-import TileStyle9 from '@/components/project260/TileStyle9.vue';
-import TileStyle10 from '@/components/project260/TileStyle10.vue';
-import TileStyle11 from '@/components/project260/TileStyle11.vue';
-import TileStyle12 from '@/components/project260/TileStyle12.vue';
-import TileStyle13 from '@/components/project260/TileStyle13.vue';
-import TileStyle14 from '@/components/project260/TileStyle14.vue';
-import TileStyle15 from '@/components/project260/TileStyle15.vue';
-import TileStyle16 from '@/components/project260/TileStyle16.vue';
-
-import TileStyle17 from '@/components/project260/TileStyle17.vue';
-import TileStyle18 from '@/components/project260/TileStyle18.vue';
-import TileStyle19 from '@/components/project260/TileStyle19.vue';
-import TileStyle20 from '@/components/project260/TileStyle20.vue';
 
 export default {
   name: 'home',
   components: {
+    ProjectIntro,
     Tile,
-    TileStyle1,
-    TileStyle2,
-    TileStyle3,
-    TileStyle4,
-    TileStyle5,
-    TileStyle6,
-    TileStyle7,
-    TileStyle8,
-    TileStyle9,
-    TileStyle10,
-    TileStyle11,
-    TileStyle12,
-    TileStyle13,
-    TileStyle14,
-    TileStyle15,
-    TileStyle16,
-    TileStyle17,
-    TileStyle18,
-    TileStyle19,
-    TileStyle20,
   },
   methods: {
     randomNumber(event) {
@@ -235,6 +226,7 @@ export default {
 @import '../scss/global';
 
   .project-260 {
+    margin-bottom: 9rem;
   }
 
   .randomize {
@@ -261,6 +253,38 @@ export default {
     height: 20rem;
     border: 0.1rem dotted $grey;
     margin: 1rem;
+  }
+
+  .ui-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:hover {
+
+        .icon--shuffle {
+
+          path {
+            fill: $black;
+          }
+        }
+      }
+    }
+
+    .icon--shuffle {
+      max-width: 3rem;
+      height: initial;
+      margin: 0 1rem 0 0;
+
+      path {
+        transition: all 0.3s;
+      }
+    }
   }
 
 </style>
