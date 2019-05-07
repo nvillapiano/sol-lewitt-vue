@@ -5,6 +5,7 @@
       <router-link to="/about">About</router-link>
       <router-link to="/project-260">Project 260</router-link>
       <router-link to="/project-260-glossary">Project 260 glossary</router-link>
+      <router-link to="/wall-drawing-370">Wall Drawing 370</router-link>
     </nav>
   </footer>
 </template>
