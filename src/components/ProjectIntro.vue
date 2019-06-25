@@ -58,9 +58,12 @@ export default {
     border-bottom: 0.1rem solid $grey;
     padding: 0 0 4rem;
     margin: 0 0 4rem;
+    //
+    display: flex;
+    align-items: flex-start;
 
     &__title {
-
+      margin: 1rem 5rem 0 0;
     }
 
     &__summary {
@@ -86,7 +89,7 @@ export default {
       }
 
       &.collapsed {
-        height: 5rem !important;
+        height: 9.8rem !important;
 
         &.shadow {
 

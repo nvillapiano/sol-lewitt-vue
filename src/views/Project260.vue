@@ -144,6 +144,23 @@
         <Tile class="style-4" />
         <Tile class="style-18" />
       </div> -->
+      <!-- Replace with real pattern -->
+      <div v-on:click="randomNumber" class="tile-group">
+        <Tile class="style-1" />
+        <Tile class="style-15" />
+      </div>
+      <div v-on:click="randomNumber" class="tile-group">
+        <Tile class="style-2" />
+        <Tile class="style-3" />
+      </div>
+      <div v-on:click="randomNumber" class="tile-group">
+        <Tile class="style-2" />
+        <Tile class="style-9" />
+      </div>
+      <div v-on:click="randomNumber" class="tile-group">
+        <Tile class="style-2" />
+        <Tile class="style-15" />
+      </div>
 
     </div>
   </div>
@@ -211,7 +228,7 @@ export default {
           children[1].classList.add(`style-${numberTwo}`)
         }, 10)
       }
-    }
+    },
   },
   mounted () {
 
@@ -239,18 +256,54 @@ export default {
 
   .tile-group {
     position: relative;
-    width: 20rem;
-    height: 20rem;
+    width: $tileSize;
+    height: $tileSize;
+    //
+    @keyframes zoom {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes wiggle {
+      0% {
+        transform: rotate(0);
+      }
+      25% {
+        transform: rotate(-5deg) scale(0.96);
+      }
+      50% {
+        transform: rotate(0);
+      }
+      75% {
+        transform: rotate(5deg) scale(1.04);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      animation: wiggle 0.5s infinite linear;
+    }
 
     .tile {
       position: absolute;
       border: none;
     }
+
   }
 
   .tile {
-    width: 20rem;
-    height: 20rem;
+    width: $tileSize;
+    height: $tileSize;
     border: 0.1rem dotted $grey;
     margin: 1rem;
   }

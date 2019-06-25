@@ -41,28 +41,29 @@ export default {
   @import '../../scss/global';
 
   .tile {
+    // @keyframes wiggle {
+    //   0% {
+    //     transform: rotate(0deg);
+    //   }
 
-    // &::after {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   background: rgba(#000, 0.05) url(../../assets/icon--shuffle.svg) no-repeat center center;
-    //   background-size: 4rem;
-    //   width: 100%;
-    //   height: 100%;
-    //   opacity: 0;
-    //   transform: rotate(-90deg);
-    //   transition: opacity 0.3s;
+    //   25% {
+    //     transform: rotate(-7.5deg);
+    //   }
+    //   50% {
+    //     transform: rotate(0deg);
+    //   }
+    //   75% {
+    //     transform: rotate(7.5deg);
+    //   }
+    //   100% {
+    //     transform: rotate(0deg);
+    //   }
     // }
 
-    &:hover {
-      cursor: pointer;
-
-      // &::after {
-      //   opacity: 1;
-      // }
-    }
+    // &:hover {
+    //   cursor: pointer;
+    //   animation: wiggle 0.5s infinite forwards;
+    // }
   }
 
   .style-1 {

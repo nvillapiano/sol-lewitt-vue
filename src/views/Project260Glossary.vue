@@ -79,8 +79,8 @@ export default {
 
   .tile-group {
     position: relative;
-    width: 20rem;
-    height: 20rem;
+    width: $tileSize;
+    height: $tileSize;
 
     .tile {
       position: absolute;
@@ -89,8 +89,8 @@ export default {
   }
 
   .tile {
-    width: 20rem;
-    height: 20rem;
+    width: $tileSize;
+    height: $tileSize;
     // border: 0.1rem dotted $grey;
     border: none;
     margin: 2rem 1rem;

@@ -1,10 +1,10 @@
 <template>
   <footer class="global-footer">
     <nav class="global-footer__nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/project-260">Project 260</router-link>
-      <router-link to="/project-260-glossary">Project 260 glossary</router-link>
+      <!-- <router-link to="/">Home</router-link> -->
+      <!-- <router-link to="/about">About</router-link> -->
+      <router-link to="/wall-drawing-260">Project 260</router-link>
+      <router-link to="/wall-drawing-260-glossary">Project 260 glossary</router-link>
       <router-link to="/wall-drawing-370">Wall Drawing 370</router-link>
     </nav>
   </footer>
@@ -25,6 +25,11 @@ export default {
     padding: 3rem 0 1rem;
     margin: 3rem 0 0;
     border-top: 0.1rem solid $grey;
+    //
+    padding: 0;
+    margin: 0 0 4rem;
+    border: 0;
+    text-align: right;
 
     &__nav {
 
