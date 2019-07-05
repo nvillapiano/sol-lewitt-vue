@@ -36,7 +36,6 @@
         </button>
     </div>
     <div class="tiles glossary">
-
       <!-- Row 1 -->
       <div v-on:click="randomNumber" class="tile-group">
         <Tile class="style-1" />
@@ -140,10 +139,6 @@
         <Tile class="style-4" />
         <Tile class="style-12" />
       </div>
-      <!-- <div v-on:click="randomNumber" class="tile-group">
-        <Tile class="style-4" />
-        <Tile class="style-18" />
-      </div> -->
       <!-- Replace with real pattern -->
       <div v-on:click="randomNumber" class="tile-group">
         <Tile class="style-1" />
@@ -180,53 +175,97 @@ export default {
     randomNumber(event) {
       const numberOne = Math.floor(Math.random() * (20 - 1 + 1)) + 1
       const numberTwo = Math.floor(Math.random() * (20 - 1 + 1)) + 1
+      const numberTwoNew = Math.floor(Math.random() * (20 - 1 + 1)) + 1
       const parent = event.target.closest('.tile-group')
       const children = parent.childNodes
 
-      // get two different random numbers
       if (numberOne === numberTwo) {
-        const numberTwo = Math.floor(Math.random() * (20 - 1 + 1)) + 1
+        removeClasses()
+        addClassesNew()
+      } else {
+        removeClasses()
+        addClasses()
       }
 
-      for (let child = 0; child < children.length; child++) {
-        const element = children[child]
-        // remove classes
-        element.removeAttribute('class')
-      }
-      // add classes
-      setTimeout(function() {
-        children[0].classList.add('tile');
-        children[1].classList.add('tile');
-        children[0].classList.add(`style-${numberOne}`);
-        children[1].classList.add(`style-${numberTwo}`);
-      }, 10)
-    },
-    randomize(event) {
-      const allNodes = document.querySelector('.tiles').childNodes
-      for (let child = 0; child < allNodes.length; child++) {
-        const individual = allNodes[child]
-        const numberOne = Math.floor(Math.random() * (20 - 1 + 1)) + 1
-        const numberTwo = Math.floor(Math.random() * (20 - 1 + 1)) + 1
-        const parent = individual.closest('.tile-group')
-        const children = parent.childNodes
-
-        // get two different random numbers
-        if (numberOne === numberTwo) {
-          const numberTwo = Math.floor(Math.random() * (20 - 1 + 1)) + 1
-        }
-
+      // clear classes
+      function removeClasses() {
         for (let child = 0; child < children.length; child++) {
           const element = children[child]
           // remove classes
           element.removeAttribute('class')
         }
-        // add classes
+      }
+
+      // add classes
+      function addClasses() {
         setTimeout(function() {
-          children[0].classList.add('tile')
-          children[1].classList.add('tile')
-          children[0].classList.add(`style-${numberOne}`)
-          children[1].classList.add(`style-${numberTwo}`)
+          children[0].classList.add('tile');
+          children[1].classList.add('tile');
+          children[0].classList.add(`style-${numberOne}`);
+          children[1].classList.add(`style-${numberTwo}`);
         }, 10)
+      }
+
+      // add classes with re-roll
+      function addClassesNew() {
+        setTimeout(function() {
+          children[0].classList.add('tile');
+          children[1].classList.add('tile');
+          children[0].classList.add(`style-${numberOne}`);
+          children[1].classList.add(`style-${numberTwoNew}`);
+        }, 10)
+      }
+
+    },
+    randomize(event) {
+      const allNodes = document.querySelector('.tiles').childNodes
+
+      for (let child = 0; child < allNodes.length; child++) {
+        const individual = allNodes[child]
+        const numberOne = Math.floor(Math.random() * (20 - 1 + 1)) + 1
+        const numberTwo = Math.floor(Math.random() * (20 - 1 + 1)) + 1
+        const numberTwoNew = Math.floor(Math.random() * (20 - 1 + 1)) + 1
+        const parent = individual.closest('.tile-group')
+        const children = parent.childNodes
+
+        // get two different random numbers
+        if (numberOne === numberTwo) {
+          console.log('if', numberOne, numberTwo, numberTwoNew)
+          removeClasses()
+          addClassesNew()
+        } else {
+          removeClasses()
+          addClasses()
+        }
+
+        // remove classes
+        function removeClasses() {
+          for (let child = 0; child < children.length; child++) {
+            const element = children[child]
+            element.removeAttribute('class')
+          }
+        }
+
+        // add classes
+        function addClasses() {
+          setTimeout(function() {
+            children[0].classList.add('tile')
+            children[1].classList.add('tile')
+            children[0].classList.add(`style-${numberOne}`)
+            children[1].classList.add(`style-${numberTwo}`)
+          }, 10)
+        }
+
+        // add classes with re-roll
+        function addClassesNew() {
+          setTimeout(function() {
+            children[0].classList.add('tile')
+            children[1].classList.add('tile')
+            children[0].classList.add(`style-${numberOne}`)
+            children[1].classList.add(`style-${numberTwoNew}`)
+          }, 10)
+        }
+
       }
     },
   },
@@ -291,7 +330,7 @@ export default {
 
     &:hover {
       cursor: pointer;
-      animation: wiggle 0.5s infinite linear;
+      // animation: wiggle 0.5s infinite linear;
     }
 
     .tile {

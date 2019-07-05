@@ -41,29 +41,7 @@ export default {
   @import '../../scss/global';
 
   .tile {
-    // @keyframes wiggle {
-    //   0% {
-    //     transform: rotate(0deg);
-    //   }
 
-    //   25% {
-    //     transform: rotate(-7.5deg);
-    //   }
-    //   50% {
-    //     transform: rotate(0deg);
-    //   }
-    //   75% {
-    //     transform: rotate(7.5deg);
-    //   }
-    //   100% {
-    //     transform: rotate(0deg);
-    //   }
-    // }
-
-    // &:hover {
-    //   cursor: pointer;
-    //   animation: wiggle 0.5s infinite forwards;
-    // }
   }
 
   .style-1 {
