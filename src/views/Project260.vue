@@ -179,14 +179,6 @@ export default {
       const parent = event.target.closest('.tile-group')
       const children = parent.childNodes
 
-      if (numberOne === numberTwo) {
-        removeClasses()
-        addClassesNew()
-      } else {
-        removeClasses()
-        addClasses()
-      }
-
       // clear classes
       function removeClasses() {
         for (let child = 0; child < children.length; child++) {
@@ -198,7 +190,7 @@ export default {
 
       // add classes
       function addClasses() {
-        setTimeout(function() {
+        setTimeout(() => {
           children[0].classList.add('tile');
           children[1].classList.add('tile');
           children[0].classList.add(`style-${numberOne}`);
@@ -208,7 +200,7 @@ export default {
 
       // add classes with re-roll
       function addClassesNew() {
-        setTimeout(function() {
+        setTimeout(() => {
           children[0].classList.add('tile');
           children[1].classList.add('tile');
           children[0].classList.add(`style-${numberOne}`);
@@ -216,8 +208,15 @@ export default {
         }, 10)
       }
 
+      if (numberOne === numberTwo) {
+        removeClasses()
+        addClassesNew()
+      } else {
+        removeClasses()
+        addClasses()
+      }
     },
-    randomize(event) {
+    randomize() {
       const allNodes = document.querySelector('.tiles').childNodes
 
       for (let child = 0; child < allNodes.length; child++) {
@@ -227,16 +226,6 @@ export default {
         const numberTwoNew = Math.floor(Math.random() * (20 - 1 + 1)) + 1
         const parent = individual.closest('.tile-group')
         const children = parent.childNodes
-
-        // get two different random numbers
-        if (numberOne === numberTwo) {
-          console.log('if', numberOne, numberTwo, numberTwoNew)
-          removeClasses()
-          addClassesNew()
-        } else {
-          removeClasses()
-          addClasses()
-        }
 
         // remove classes
         function removeClasses() {
@@ -248,7 +237,7 @@ export default {
 
         // add classes
         function addClasses() {
-          setTimeout(function() {
+          setTimeout(() => {
             children[0].classList.add('tile')
             children[1].classList.add('tile')
             children[0].classList.add(`style-${numberOne}`)
@@ -258,7 +247,7 @@ export default {
 
         // add classes with re-roll
         function addClassesNew() {
-          setTimeout(function() {
+          setTimeout(() => {
             children[0].classList.add('tile')
             children[1].classList.add('tile')
             children[0].classList.add(`style-${numberOne}`)
@@ -266,11 +255,18 @@ export default {
           }, 10)
         }
 
+        // get two different random numbers
+        if (numberOne === numberTwo) {
+          removeClasses()
+          addClassesNew()
+        } else {
+          removeClasses()
+          addClasses()
+        }
       }
     },
   },
   mounted () {
-
   },
 };
 </script>
