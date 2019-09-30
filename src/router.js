@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Project260 from './views/Project260.vue';
 import Project260Glossary from './views/Project260Glossary.vue';
 import WallDrawing370 from './views/WallDrawing370.vue';
+import WallDrawing610 from './views/WallDrawing610.vue';
 
 Vue.use(Router);
 
@@ -41,6 +42,11 @@ export default new Router({
       path: '/wall-drawing-370',
       name: 'Wall Drawing 370',
       component: WallDrawing370,
+    },
+    {
+      path: '/wall-drawing-610',
+      name: 'Wall Drawing 610',
+      component: WallDrawing610,
     },
   ],
 });
