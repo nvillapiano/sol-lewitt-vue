@@ -13,9 +13,26 @@ $black: #221c16;
 $grey: #d5d0cb;
 $orange: orange;
 
+
+// Fonts
+@font-face {
+  font-family: 'marvin visions big bold';
+  src: url('/fonts/marvinvisionsbig-bold-webfont.woff2') format('woff2'),
+       url('/fonts/marvinvisionsbig-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin marvin-visions-big-bold {
+  font-family: 'marvin visions big bold';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 // Typography
 %heading1 {
   font-size: 4.8rem;
+  @include marvin-visions-big-bold();
 }
 
 h1 {
@@ -26,6 +43,7 @@ p {
   font-size: 1.6rem;
   line-height: 1.4;
 }
+
 
 a {
   color: $orange;
