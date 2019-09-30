@@ -273,106 +273,107 @@ export default {
 
 <style lang="scss">
 
-// colors
 
 @import '../scss/global';
 
-  .project-260 {
-    margin-bottom: 9rem;
+$tileSize: calc(100vw / 8);
+
+.project-260 {
+  margin-bottom: 9rem;
+}
+
+.randomize {
+}
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tile-group {
+  position: relative;
+  width: $tileSize;
+  height: $tileSize;
+  //
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
-  .randomize {
+  @keyframes wiggle {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(-5deg) scale(0.96);
+    }
+    50% {
+      transform: rotate(0);
+    }
+    75% {
+      transform: rotate(5deg) scale(1.04);
+    }
+    100% {
+      transform: rotate(0);
+    }
   }
 
-  .tiles {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tile-group {
-    position: relative;
-    width: $tileSize;
-    height: $tileSize;
-    //
-    @keyframes zoom {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    @keyframes wiggle {
-      0% {
-        transform: rotate(0);
-      }
-      25% {
-        transform: rotate(-5deg) scale(0.96);
-      }
-      50% {
-        transform: rotate(0);
-      }
-      75% {
-        transform: rotate(5deg) scale(1.04);
-      }
-      100% {
-        transform: rotate(0);
-      }
-    }
-
-    &:hover {
-      cursor: pointer;
-      // animation: wiggle 0.5s infinite linear;
-    }
-
-    .tile {
-      position: absolute;
-      border: none;
-    }
-
+  &:hover {
+    cursor: pointer;
+    // animation: wiggle 0.5s infinite linear;
   }
 
   .tile {
-    width: $tileSize;
-    height: $tileSize;
-    border: 0.1rem dotted $grey;
-    margin: 1rem;
+    position: absolute;
+    border: none;
   }
 
-  .ui-bar {
+}
+
+.tile {
+  width: $tileSize;
+  height: $tileSize;
+  border: 0.1rem dotted $grey;
+  margin: 1rem;
+}
+
+.ui-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .button {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 
-    .button {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    &:hover {
 
-      &:hover {
+      .icon--shuffle {
 
-        .icon--shuffle {
-
-          path {
-            fill: $black;
-          }
+        path {
+          fill: $black;
         }
       }
     }
+  }
 
-    .icon--shuffle {
-      max-width: 3rem;
-      height: initial;
-      margin: 0 1rem 0 0;
+  .icon--shuffle {
+    max-width: 3rem;
+    height: initial;
+    margin: 0 1rem 0 0;
 
-      path {
-        transition: all 0.3s;
-      }
+    path {
+      transition: all 0.3s;
     }
   }
+}
 
 </style>

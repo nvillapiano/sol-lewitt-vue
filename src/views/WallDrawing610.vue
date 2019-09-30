@@ -49,26 +49,6 @@ export default {
 $buildingBlock: 7vw;
 
 
-//////////////
-//  Colors  //
-//////////////
-
-// $red: #dc445d;
-// $coral: #db5943;
-// $cream: #e3d1b9;
-// $lime: #c2cc59;
-// $goldenrod: #eaca5d;
-// $wine: #a24d62;
-// $perriwinkle: #8cadb2;
-// $avocado: #8f9f56;
-// $grape: #834658;
-// $brick: #893c4c;
-
-
-////////////////
-//  Patterns  //
-////////////////
-
 %stepTop {
   content: '';
   position: absolute;
@@ -154,7 +134,7 @@ $buildingBlock: 7vw;
       width: $buildingBlock * 3;
 
       &::before {
-        background: $perriwinkle;
+        background: $periwinkle;
         top: $buildingBlock * -1;
         left: $buildingBlock * 2;
       }
