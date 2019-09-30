@@ -19,7 +19,6 @@
 import { setTimeout } from 'timers';
 
 
-
 export default {
   name: 'ProjectIntro',
   props: {
@@ -33,7 +32,7 @@ export default {
 
       summaryElement.setAttribute('style', `height: ${summaryHeight}px`)
 
-      setTimeout(function() {
+      setTimeout(() => {
         summaryElement.classList.add('collapsed')
       }, 10)
     },
@@ -41,11 +40,11 @@ export default {
       const summaryElement = document.getElementsByClassName('project-intro__summary')[0]
       summaryElement.classList.toggle('collapsed')
       document.getElementsByClassName('project-intro__summary-toggle')[0].classList.toggle('active')
-    }
+    },
   },
   mounted () {
     this.setHeight()
-  }
+  },
 };
 </script>
 
