@@ -43,57 +43,57 @@ export default {
 
 <style lang="scss">
 
-// colors
-
 @import '../scss/global';
 
-  .project-260 {
+$tileSize: calc(100vw / 8);
 
-    &.glossary {
+.project-260 {
 
-      .tiles {
-        counter-reset: section;
+  &.glossary {
 
-        .tile {
-          border: 0.1rem dashed $grey;
+    .tiles {
+      counter-reset: section;
 
-          &::after {
-            counter-increment: section;
-            content: "Tile " counter(section) "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            font-size: 1.2rem;
-            background: rgba($black, 0.75);
-            padding: 0.5rem;
-          }
+      .tile {
+        border: 0.1rem dashed $grey;
+
+        &::after {
+          counter-increment: section;
+          content: "Tile " counter(section) "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 1.2rem;
+          background: rgba($black, 0.75);
+          padding: 0.5rem;
         }
       }
     }
   }
+}
 
-  .tiles {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .tile-group {
-    position: relative;
-    width: $tileSize;
-    height: $tileSize;
-
-    .tile {
-      position: absolute;
-      border: none;
-    }
-  }
+.tile-group {
+  position: relative;
+  width: $tileSize;
+  height: $tileSize;
 
   .tile {
-    width: $tileSize;
-    height: $tileSize;
-    // border: 0.1rem dotted $grey;
+    position: absolute;
     border: none;
-    margin: 2rem 1rem;
   }
+}
+
+.tile {
+  width: $tileSize;
+  height: $tileSize;
+  // border: 0.1rem dotted $grey;
+  border: none;
+  margin: 2rem 1rem;
+}
 
 </style>

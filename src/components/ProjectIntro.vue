@@ -10,7 +10,7 @@
           <path d="M32.7,83.2c0.4,0.4,0.9,0.6,1.4,0.6s1-0.2,1.4-0.6l31.8-31.8c0.8-0.8,0.8-2,0-2.8L35.5,16.8  c-0.8-0.8-2-0.8-2.8,0c-0.8,0.8-0.8,2,0,2.8L63.1,50L32.7,80.4C31.9,81.2,31.9,82.5,32.7,83.2z"></path>
         </svg>
       </button>
-      <p v-html="summary"></p>
+      <div v-html="summary"></div>
     </div>
   </section>
 </template>
@@ -28,22 +28,42 @@ export default {
   methods: {
     setHeight() {
       const summaryElement = document.getElementsByClassName('project-intro__summary')[0]
-      const summaryHeight = summaryElement.offsetHeight
 
-      summaryElement.setAttribute('style', `height: ${summaryHeight}px`)
+      if (summaryElement !== undefined) {
+        const summaryHeight = summaryElement.offsetHeight
 
-      setTimeout(() => {
-        summaryElement.classList.add('collapsed')
-      }, 10)
+        summaryElement.setAttribute('style', `height: ${summaryHeight}px`)
+
+        setTimeout(() => {
+          summaryElement.classList.add('collapsed')
+        }, 10)
+      }
     },
     toggleSummary() {
       const summaryElement = document.getElementsByClassName('project-intro__summary')[0]
-      summaryElement.classList.toggle('collapsed')
-      document.getElementsByClassName('project-intro__summary-toggle')[0].classList.toggle('active')
+
+      if (summaryElement !== undefined) {
+        summaryElement.classList.toggle('collapsed')
+        document.getElementsByClassName('project-intro__summary-toggle')[0].classList.toggle('active')
+      }
     },
+    setFontSize() {
+      const titleTarget = document.getElementsByClassName('project-intro__title')[0]
+      const charCount = titleTarget.innerText.length
+      const charSize = window.innerWidth / charCount
+      const maxSize = 100
+
+      if ( charSize <= maxSize) {
+        titleTarget.style.fontSize = `calc(100vw / ${charCount} + 1.5rem)`
+        console.log(charCount)
+      } else {
+        console.log('else')
+      }
+    }
   },
   mounted () {
     this.setHeight()
+    this.setFontSize()
   },
 };
 </script>
@@ -59,15 +79,27 @@ export default {
     margin: 0 0 4rem;
     //
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     &__title {
-      margin: 1rem 5rem 0 0;
+      font-size: 10rem;
+      margin: 6rem 0 5rem;
+
+      @media only screen and (max-width: $bp1) {
+        font-size: calc(4vw + 1.6rem);
+      }
+
+      @media only screen and (max-width: $bp2) {
+        font-size: 2.4rem;
+      }
     }
 
     &__summary {
       position: relative;
-      max-width: 55rem;
+      max-width: 80rem;
+      margin: -5rem 0 0;
       padding: 0 5rem 0 0;
       overflow: hidden;
       transition: height 0.3s;
