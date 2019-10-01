@@ -1,6 +1,6 @@
 <template>
   <header class="global-header">
-    <div class="global-header__logo">
+    <router-link class="global-header__logo" to="/">
       <span class="global-header__logo__letter">D</span>
       <span class="global-header__logo__letter">o</span>
       <span class="global-header__logo__letter">I</span>
@@ -11,7 +11,7 @@
       <span class="global-header__logo__letter">i</span>
       <span class="global-header__logo__letter">T</span>
       <span class="global-header__logo__letter">T</span>
-    </div>
+    </router-link>
     <nav class="evergreen-navigation">
       <div class="evergreen-navigation--index">
         <div @click="toggleContent()" class="evergreen-navigation--index__control">
@@ -131,6 +131,7 @@ export default {
     justify-content: space-between;
 
     &__logo {
+      text-decoration: none;
 
       &__letter {
         @include marvin-visions-big-bold;
