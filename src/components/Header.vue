@@ -77,13 +77,13 @@ export default {
       if (target.classList.contains('show')) {
         target.classList.remove('show')
         trigger.classList.remove('active')
-        setTimeout( () => {
+        setTimeout(() => {
           target.style.zIndex = '-1'
         }, 100)
       } else {
         target.classList.add('show')
         trigger.classList.add('active')
-        setTimeout( () => {
+        setTimeout(() => {
           target.style.zIndex = '100'
         }, 100)
       }
@@ -95,34 +95,33 @@ export default {
       if (target.classList.contains('show')) {
         target.classList.remove('show')
         trigger.classList.remove('active')
-        setTimeout( () => {
+        setTimeout(() => {
           target.style.zIndex = '-1'
         }, 100)
-
       } else {
         target.classList.add('show')
         trigger.classList.add('active')
-        setTimeout( () => {
+        setTimeout(() => {
           target.style.zIndex = '100'
         }, 100)
       }
-    }
+    },
   },
   mounted () {
     document.addEventListener('click', (event) => {
       const trigger = document.querySelector('.evergreen-navigation--index__control')
       const target = document.querySelector('.evergreen-navigation--index__content')
 
-      if (target.classList.contains('show') ) {
+      if (target.classList.contains('show')) {
         if (event.target.classList.contains('evergreen-navigation--index__content') || event.target.classList.contains('evergreen-navigation--index__control') || event.target.classList.contains('evergreen-navigation--index__control__bar')) {
-          return
+
         } else {
           target.classList.remove('show')
           trigger.classList.remove('active')
         }
       }
     }, false);
-  }
+  },
 };
 </script>
 

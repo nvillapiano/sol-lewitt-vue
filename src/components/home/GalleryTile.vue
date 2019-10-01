@@ -12,7 +12,7 @@ export default {
   props: {
     GalleryTileTitle: String,
     GalleryTileImgSrc: String,
-    GalleryTileUrl: String
+    GalleryTileUrl: String,
   },
 };
 </script>

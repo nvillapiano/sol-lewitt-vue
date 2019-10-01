@@ -22,12 +22,12 @@ export default {
     },
     updated() {
       console.log('updated')
-    }
+    },
   },
   created() {
     this.test()
     this.updated()
-  }
+  },
 };
 </script>
 
