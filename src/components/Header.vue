@@ -1,5 +1,5 @@
 <template>
-  <header class="global-header">
+  <header class="global-header" id="top">
     <router-link class="global-header__logo" to="/">
       <span class="global-header__logo__letter">D</span>
       <span class="global-header__logo__letter">o</span>
@@ -22,16 +22,16 @@
         <div class="evergreen-navigation--index__content">
           <ul>
             <li @click="toggleContent()">
-              <router-link to="/wall-drawing-260">Project 260</router-link>
+              <router-link to="/wall-drawing-610">Wall Drawing #610</router-link>
             </li>
             <li @click="toggleContent()">
-              <router-link to="/wall-drawing-260-glossary">Project 260 glossary</router-link>
+              <router-link to="/wall-drawing-370">Wall Drawing #370</router-link>
             </li>
             <li @click="toggleContent()">
-              <router-link to="/wall-drawing-370">Wall Drawing 370</router-link>
+              <router-link to="/wall-drawing-260">Wall Drawing #260</router-link>
             </li>
             <li @click="toggleContent()">
-              <router-link to="/wall-drawing-610">Wall Drawing 610</router-link>
+              <router-link to="/wall-drawing-260-glossary">Wall Drawing #260: Tile Glossary</router-link>
             </li>
           </ul>
         </div>
@@ -77,9 +77,15 @@ export default {
       if (target.classList.contains('show')) {
         target.classList.remove('show')
         trigger.classList.remove('active')
+        setTimeout( () => {
+          target.style.zIndex = '-1'
+        }, 100)
       } else {
         target.classList.add('show')
         trigger.classList.add('active')
+        setTimeout( () => {
+          target.style.zIndex = '100'
+        }, 100)
       }
     },
     toggleInfo() {
@@ -248,6 +254,8 @@ export default {
           position: absolute;
           top: 4.5rem;
           right: -1.9rem;
+          width: 30rem;
+          max-width: calc(100vw - 9.4rem);
           border: 0.1rem solid $grey;
           padding: 3rem 3.5rem 3rem 4rem;
           opacity: 0;
@@ -275,7 +283,6 @@ export default {
             margin: 0;
             padding: 0 1rem 0 0;
             list-style: none;
-            white-space: nowrap;
             display: block;
             text-align: right;
             font-size: 1.6rem;
@@ -366,8 +373,8 @@ export default {
       transform: translateX(-50%) translateY(-50%);
       box-shadow: $shadow;
       background: $black;
-      max-width: 95vh;
-      max-height: 95vh;
+      max-width: 90vw;
+      max-height: 90vh;
       opacity: 0;
       pointer-events: none;
       z-index: -1;

@@ -267,6 +267,14 @@ export default {
     },
   },
   mounted () {
+    const scrollToTop = () => {
+      const c = document.documentElement.scrollTop || document.body.scrollTop;
+      if (c > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, c - c / 2);
+      }
+    };
+    scrollToTop();
   },
 };
 </script>
@@ -288,6 +296,8 @@ $tileSize: calc(100vw / 8);
 .tiles {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .tile-group {
@@ -347,7 +357,7 @@ $tileSize: calc(100vw / 8);
 .ui-bar {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 
   .button {
     display: flex;

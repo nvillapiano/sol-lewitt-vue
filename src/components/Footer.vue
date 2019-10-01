@@ -7,23 +7,27 @@
       <router-link to="/wall-drawing-610">Wall Drawing 610</router-link> -->
 
     </nav>
-    <div class="copyright">
+    <a href="https://github.com/nvillapiano/sol-lewitt-vue" class="copyright">
       <span class="copyright__letter">&copy;</span>
-      <span class="copyright__letter">D</span>
-      <span class="copyright__letter">o</span>
-      <span class="copyright__letter">I</span>
-      <span class="copyright__letter">t</span>
-      <span class="copyright__letter">L</span>
-      <span class="copyright__letter">e</span>
-      <span class="copyright__letter">W</span>
+      <span class="copyright__letter">N</span>
       <span class="copyright__letter">i</span>
-      <span class="copyright__letter">t</span>
-      <span class="copyright__letter">t</span>
+      <span class="copyright__letter">c</span>
+      <span class="copyright__letter">k</span>
+      <span class="copyright__letter">V</span>
+      <span class="copyright__letter">i</span>
+      <span class="copyright__letter">l</span>
+      <span class="copyright__letter">l</span>
+      <span class="copyright__letter">a</span>
+      <span class="copyright__letter">p</span>
+      <span class="copyright__letter">i</span>
+      <span class="copyright__letter">a</span>
+      <span class="copyright__letter">n</span>
+      <span class="copyright__letter">o</span>
       <span class="copyright__letter">2</span>
       <span class="copyright__letter">0</span>
       <span class="copyright__letter">1</span>
       <span class="copyright__letter">9</span>
-    </div>
+    </a>
   </footer>
 </template>
 
@@ -92,76 +96,65 @@ export default {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      text-decoration: none;
 
       &__letter {
         @include marvin-visions-big-bold;
         font-size: 2rem;
         display: inline-flex;
 
-        &:nth-of-type(1) {
+        // Color wheel
+
+        &:nth-of-type(1n + 1) {
+          color: $red;
+        }
+
+        &:nth-of-type(2n + 2) {
+          color: $coral;
+        }
+
+        &:nth-of-type(3n + 3) {
+          color: $cream;
+        }
+
+        &:nth-of-type(4n + 4) {
+          color: $lime;
+        }
+
+        &:nth-of-type(5n + 5) {
           color: $goldenrod;
+        }
+
+        &:nth-of-type(6n + 6) {
+          color: $wine;
+        }
+
+        &:nth-of-type(7n + 7) {
+          color: $periwinkle;
+        }
+
+        &:nth-of-type(8n + 8) {
+          color: $avocado;
+        }
+
+        &:nth-of-type(9n + 9) {
+          color: $grape;
+        }
+
+        &:nth-of-type(10n + 10) {
+          color: $brick;
+        }
+
+        // Character specific
+        &:nth-of-type(1) {
           font-size: 3rem;
           margin-bottom: -1rem;
         }
 
-        &:nth-of-type(2) {
-          color: $red;
+        &:nth-of-type(2),
+        &:nth-of-type(6),
+        &:nth-of-type(16) {
           margin-left: 0.4ch;
-        }
-
-        &:nth-of-type(3) {
-          color: $coral;
-        }
-
-        &:nth-of-type(4) {
-          color: $cream;
-          margin-left: 0.4ch;
-        }
-
-        &:nth-of-type(5) {
-          color: $lime;
-        }
-
-        &:nth-of-type(6) {
-          color: $goldenrod;
-          margin-left: 0.4ch;
-        }
-
-        &:nth-of-type(7) {
-          color: $wine;
-        }
-
-        &:nth-of-type(8) {
-          color: $periwinkle;
-        }
-
-        &:nth-of-type(9) {
-          color: $avocado;
-        }
-
-        &:nth-of-type(10) {
-          color: $grape;
-        }
-
-        &:nth-of-type(11) {
-          color: $brick;
-        }
-
-        &:nth-of-type(12) {
-          color: $red;
-          margin-left: 0.4ch;
-        }
-
-        &:nth-of-type(13) {
-          color: $coral;
-        }
-
-        &:nth-of-type(14) {
-          color: $cream;
-        }
-
-        &:nth-of-type(15) {
-          color: $lime;
         }
       }
     }

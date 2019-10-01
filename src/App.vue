@@ -16,6 +16,18 @@ export default {
     Header,
     Footer,
   },
+  methods: {
+    test() {
+      console.log('test')
+    },
+    updated() {
+      console.log('updated')
+    }
+  },
+  created() {
+    this.test()
+    this.updated()
+  }
 };
 </script>
 
