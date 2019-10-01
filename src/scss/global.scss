@@ -8,6 +8,7 @@
 $black: #221c16;
 $grey: #d5d0cb;
 $orange: #ffa500;
+//
 $red: #dc445d;
 $coral: #db5943;
 $cream: #e3d1b9;
@@ -97,7 +98,7 @@ html, body {
   padding: 1rem;
 }
 
-
+$shadow: 0 2rem 5rem 3rem $black;
 
 /////////////////////////////
 ////  UI element styles  ////
