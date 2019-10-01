@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-// import Home from './views/Home.vue';
+import Home from './views/Home.vue';
 import Project260 from './views/Project260.vue';
 import Project260Glossary from './views/Project260Glossary.vue';
 import WallDrawing370 from './views/WallDrawing370.vue';
@@ -17,8 +17,8 @@ export default new Router({
     // },
     {
       path: '/',
-      name: 'Wall Drawing 260',
-      component: Project260,
+      name: 'Do it LeWitt',
+      component: Home,
     },
     // {
     //   path: '/about',

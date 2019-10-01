@@ -1,7 +1,7 @@
 <template>
   <div class="project-260 glossary">
     <ProjectIntro
-      title="Project 260 tile glossary"
+      title="Wall Drawing #260: tile glossary"
     />
     <div class="tiles">
       <Tile class="style-1"></Tile>
@@ -38,6 +38,16 @@ export default {
     Tile,
     ProjectIntro,
   },
+  mounted() {
+    const scrollToTop = () => {
+      const c = document.documentElement.scrollTop || document.body.scrollTop;
+      if (c > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, c - c / 2);
+      }
+    };
+    scrollToTop();
+  }
 };
 </script>
 

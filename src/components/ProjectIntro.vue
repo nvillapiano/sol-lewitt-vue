@@ -55,9 +55,6 @@ export default {
 
       if ( charSize <= maxSize) {
         titleTarget.style.fontSize = `calc(100vw / ${charCount} + 1.5rem)`
-        console.log(charCount)
-      } else {
-        console.log('else')
       }
     }
   },
