@@ -32,7 +32,7 @@ import GalleryTile from '@/components/home/GalleryTile.vue';
 export default {
   name: 'home',
   components: {
-    GalleryTile
+    GalleryTile,
   },
 };
 </script>

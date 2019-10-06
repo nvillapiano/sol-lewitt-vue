@@ -51,7 +51,7 @@ export default {
       }
     };
     scrollToTop();
-  }
+  },
 };
 </script>
 

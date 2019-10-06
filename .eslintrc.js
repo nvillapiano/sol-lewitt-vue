@@ -18,6 +18,7 @@ module.exports = {
     'no-plusplus': 1,
     'no-inner-declarations': 1,
     'no-shadow': 1,
+    'no-empty': 1,
   },
   parserOptions: {
     parser: 'babel-eslint',
