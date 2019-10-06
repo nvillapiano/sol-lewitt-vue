@@ -1,8 +1,10 @@
 {
-  "name": "sol-lewitt",
-  "version": "0.1.0",
+  "name": "do-it-lewitt",
+  "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
+    "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
