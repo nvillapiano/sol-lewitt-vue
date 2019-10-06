@@ -53,10 +53,10 @@ export default {
       const charSize = window.innerWidth / charCount
       const maxSize = 100
 
-      if ( charSize <= maxSize) {
+      if (charSize <= maxSize) {
         titleTarget.style.fontSize = `calc(100vw / ${charCount} + 1.5rem)`
       }
-    }
+    },
   },
   mounted () {
     this.setHeight()
