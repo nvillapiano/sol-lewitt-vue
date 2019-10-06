@@ -1,0 +1,124 @@
+
+/////////////////////
+////  Variables  ////
+/////////////////////
+
+
+// Colors
+$black: #221c16;
+$grey: #d5d0cb;
+$orange: #ffa500;
+//
+$red: #dc445d;
+$coral: #db5943;
+$cream: #e3d1b9;
+$lime: #c2cc59;
+$goldenrod: #eaca5d;
+$wine: #a24d62;
+$periwinkle: #8cadb2;
+$avocado: #8f9f56;
+$grape: #834658;
+$brick: #893c4c;
+
+// Breakpoints
+$bp1: 768px;
+$bp2: 440px;
+
+
+/////////////////////
+////    Fonts    ////
+/////////////////////
+
+
+@font-face {
+  font-family: 'marvin visions big bold';
+  src: url('/fonts/marvinvisionsbig-bold-webfont.woff2') format('woff2'),
+       url('/fonts/marvinvisionsbig-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin marvin-visions-big-bold {
+  font-family: 'marvin visions big bold';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@mixin ubuntu {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+//////////////////////
+////  Typography  ////
+//////////////////////
+
+
+%heading1 {
+  font-size: 4.8rem;
+  @include marvin-visions-big-bold();
+}
+
+h1 {
+  @extend %heading1;
+  margin: 0;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+a {
+  color: $orange;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $grey;
+  }
+}
+
+
+
+/////////////////////////
+////  Global styles  ////
+/////////////////////////
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 62.5%; // 1rem = 10px;
+  background: $black;
+  color: $grey;
+  font-family: 'Ubuntu', 'Avenir', Helvetica, Arial, sans-serif;
+  padding: 1rem;
+}
+
+$shadow: 0 2rem 5rem 3rem $black;
+
+/////////////////////////////
+////  UI element styles  ////
+/////////////////////////////
+
+
+button {
+  border: none;
+  background: none;
+  border: 0.2rem solid $grey;
+  color: $grey;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $black;
+    background: $grey;
+    color: $black;
+  }
+}
