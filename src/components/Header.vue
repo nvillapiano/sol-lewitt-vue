@@ -22,6 +22,9 @@
         <div class="evergreen-navigation--index__content">
           <ul>
             <li @click="toggleContent()">
+              <router-link to="/wall-drawing-1256">Wall Drawing #1256</router-link>
+            </li>
+            <li @click="toggleContent()">
               <router-link to="/wall-drawing-610">Wall Drawing #610</router-link>
             </li>
             <li @click="toggleContent()">
