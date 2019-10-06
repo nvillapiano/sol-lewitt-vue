@@ -33,7 +33,7 @@ import ProjectIntro from '@/components/ProjectIntro.vue'
 export default {
   name: 'Wall Drawing 610',
   components: {
-    ProjectIntro
+    ProjectIntro,
   },
   mounted() {
     const scrollToTop = () => {
@@ -44,7 +44,7 @@ export default {
       }
     };
     scrollToTop();
-  }
+  },
 };
 </script>
 
@@ -174,9 +174,6 @@ $buildingBlock: 7vw;
     }
   }
 }
-
-
-
 
 
 </style>

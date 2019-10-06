@@ -107,7 +107,7 @@ $shadow: 0 2rem 5rem 3rem $black;
 
 button {
   border: none;
-  background: none;
+  background: $black;
   border: 0.2rem solid $grey;
   color: $grey;
   padding: 1rem 2rem;

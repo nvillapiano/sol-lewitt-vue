@@ -2,6 +2,11 @@
   <div class="home">
     <div class="gallery">
       <GalleryTile
+        GalleryTileTitle="Wall Drawing #1256"
+        GalleryTileImgSrc="/images/wall-drawing-1256.png"
+        GalleryTileUrl="/wall-drawing-1256#top"
+      />
+      <GalleryTile
         GalleryTileTitle="Wall Drawing #610"
         GalleryTileImgSrc="/images/wall-drawing-610.png"
         GalleryTileUrl="/wall-drawing-610#top"
@@ -32,7 +37,7 @@ import GalleryTile from '@/components/home/GalleryTile.vue';
 export default {
   name: 'home',
   components: {
-    GalleryTile
+    GalleryTile,
   },
 };
 </script>

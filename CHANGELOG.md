@@ -1,3 +1,20 @@
+<!-- Template
+
+#0.0.0
+
+## Added
+
+## Updated
+
+## Fixed
+
+-->
+
+#1.1.0
+
+## Added
++ Wall Drawing #1256: Five Pointed Stars
+
 #1.0.0
 
 ## Added
@@ -7,9 +24,6 @@
 + License added to `package.json`
 + `npm start` script added
 + Updated `README.md`
-
-<!--## Fixed-->
-
 
 #0.1.0
 
@@ -27,6 +41,3 @@
 + Information trigger/content
 + Global Footer component
 + Project container architecture
-
-<!--## Updated-->
-<!--## Fixed-->
