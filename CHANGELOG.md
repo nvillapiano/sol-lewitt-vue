@@ -10,6 +10,11 @@
 
 -->
 
+#1.1.1
+
+## Fixed
++ Refactored `Star.vue` SCSS
+
 #1.1.0
 
 ## Added
