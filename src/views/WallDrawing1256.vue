@@ -11,12 +11,12 @@
         </p>
         <br />
         <br />
-        <p>This interpretation uses a button to toggle between the vibrant color state and contrasted grayscale state of the original painting.</p>
+        <p>This interpretation utilizes a user click to toggle between the vibrant color state and contrasted black &amp; white.</p>
       "
     />
-    <div class="stars">
+    <div @click="toggleColors" class="stars" title="Click to toggle colors">
 
-      <button @click="toggleColors" class="button toggle-colors">Toggle colors</button>
+      <!-- <button class="button toggle-colors">Toggle colors</button> -->
 
       <Star />
       <Star />
@@ -94,6 +94,10 @@ export default {
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     &.grayscale {
 
