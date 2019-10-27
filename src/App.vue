@@ -27,4 +27,11 @@ export default {
 
 @import './scss/global';
 
+html, body {
+
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
 </style>
