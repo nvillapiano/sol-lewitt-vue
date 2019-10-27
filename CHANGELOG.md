@@ -10,6 +10,11 @@
 
 -->
 
+#1.1.3
+
+## Updated
++ Refactored Information overlay into Information popover
+
 #1.1.2
 
 ## Fixed
