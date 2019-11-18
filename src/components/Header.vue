@@ -82,7 +82,7 @@ export default {
 
       if (target.classList.contains('show')) {
         if (event.target.classList.contains('evergreen-navigation--index__content') || event.target.classList.contains('evergreen-navigation--index__control') || event.target.classList.contains('evergreen-navigation--index__control__bar')) {
-          // do nothing
+          // return
         } else {
           target.classList.remove('show')
           trigger.classList.remove('active')
