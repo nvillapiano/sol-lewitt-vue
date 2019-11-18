@@ -141,16 +141,14 @@ $duration-unit: 0.05s;
   $z-const: 100;
   $z-index: $z-const - ($i - 1);
 
-  $transition-delay: ($i + 9) * .01s;
+  $transition-delay: ($i + 9) * .0075s;
 
   $duration-const: 0.05s;
-  $transition-duration: $duration-const * ($i + 8);
 
   .star:nth-of-type(#{$i}) {
     transform: translateX(-50%) translateY(-50%) scale(#{$scale-base + $scale-mod * $scale-offset});
     z-index: $z-index;
     transition-delay: $transition-delay;
-    transition-duration: $transition-duration;
   }
 }
 
