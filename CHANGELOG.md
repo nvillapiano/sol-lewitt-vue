@@ -10,6 +10,11 @@
 
 -->
 
+#1.1.4
+
+## Updated
++ Updated star animation, no transition
+
 #1.1.3
 
 ## Updated
