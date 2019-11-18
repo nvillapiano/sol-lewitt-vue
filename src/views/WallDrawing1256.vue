@@ -56,7 +56,7 @@ export default {
     toggleColors() {
       const colorsTarget = document.querySelector('.stars')
       colorsTarget.classList.toggle('grayscale')
-    }
+    },
   },
   mounted() {
     const scrollToTop = () => {
