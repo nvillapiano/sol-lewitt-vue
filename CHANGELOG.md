@@ -9,6 +9,11 @@
 ## Fixed
 
 -->
+#1.1.5
+
+## Updated
++ Added `node-sass` to dev dependencies
+
 
 #1.1.4
 
