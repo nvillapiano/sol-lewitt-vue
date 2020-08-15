@@ -96,7 +96,7 @@ export default {
     &__summary {
       position: relative;
       max-width: 80rem;
-      margin: -5rem 0 0;
+      margin: -5rem 0 0 0;
       padding: 0 5rem 0 0;
       overflow: hidden;
       transition: height 0.3s;

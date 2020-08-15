@@ -64,14 +64,18 @@ $bp2: 440px;
   }
 }
 
+%pStyle {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
 h1 {
   @extend %heading1;
   margin: 0;
 }
 
 p {
-  font-size: 1.6rem;
-  line-height: 1.4;
+  @extend %pStyle;
 }
 
 a {
@@ -83,6 +87,26 @@ a {
   }
 }
 
+blockquote {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 3rem;
+  margin: 2rem 2rem 2rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: 100%;
+    background: $grey;
+    border-radius: 0.6rem;
+  }
+}
+
+cite {
+  @extend %pStyle;
+}
 
 
 /////////////////////////

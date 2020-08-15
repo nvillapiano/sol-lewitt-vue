@@ -3,12 +3,14 @@
     <ProjectIntro
       title="Wall Drawing #1256"
       summary="
-        <p>
-          Early in the development of the new Berlin Embassy, Sol LeWitt was invited to create one of his wall drawings for its entrance. In 2004, he presented his design for the Behrenstrasse entrance, a composition that was sure to draw attention. The exacting pattern follows the outline of a five pointed star: one side in black and white and the other in brilliant colors. LeWitt’s wall drawings usually evolve from a set idea that gives directions to those who actually paint or draw the work. The idea of stars as guiding lights may not have been the artist’s, but they will inevitably be seen that way. An earlier composition of lines going off at angles from several points was popularly know as “Star Wars.”
-        </p>
-        <p>
-          <a href='https://slideplayer.com/slide/4723042/'>A Selection of Art in the Embassy</a>
-        </p>
+        <blockquote>
+          <p>
+            Early in the development of the new Berlin Embassy, Sol LeWitt was invited to create one of his wall drawings for its entrance. In 2004, he presented his design for the Behrenstrasse entrance, a composition that was sure to draw attention. The exacting pattern follows the outline of a five pointed star: one side in black and white and the other in brilliant colors. LeWitt’s wall drawings usually evolve from a set idea that gives directions to those who actually paint or draw the work. The idea of stars as guiding lights may not have been the artist’s, but they will inevitably be seen that way. An earlier composition of lines going off at angles from several points was popularly know as “Star Wars.”
+          </p>
+          <cite>
+            <a href='https://slideplayer.com/slide/4723042/'>A Selection of Art in the Embassy</a>
+          </cite>
+        </blockquote>
         <br />
         <br />
         <p>This interpretation utilizes a user click to toggle between the vibrant color state and contrasted black &amp; white.</p>
